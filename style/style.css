@@ -14,7 +14,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* ------Navigation Bar related styles */
 .nav-bar{
     display: flex;
     justify-content: space-between;
@@ -26,11 +26,12 @@
 
 .logo-container{
     display:flex;
+    justify-items: center;
     align-items: center;
 }
-.nav-links{
-    display: flex;
-    justify-content: space-between;
+.nav-links li{
+    display: inline-block;
+    justify-content: center;
     align-items: center;
     padding: 1rem 0;
 }
@@ -83,4 +84,48 @@
     border: none;
     font-weight: semi-bold;
     font-size: 1.25rem;
+}
+
+#icon{
+    padding: .32rem .45rem .2rem .45rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    cursor: pointer;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    z-index: 10001;
+}
+
+#icon svg{
+    color: black;
+    height: 1.7rem;
+    transition: all .3s ease;
+}
+
+#icon:hover {
+    background-color: grey;
+}
+
+#icon:hover svg{
+    color: black;
+}
+
+ #checkbox, #icon{
+    display: none;
+}
+
+
+@media  screen and (max-width: 576px){
+    #icon{
+        display: block;
+    }
+    .btn-primary, .logo-name{
+        display: none;
+    }
 }
